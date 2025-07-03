@@ -27,7 +27,7 @@ export const FeatureSection3 = () => {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center gap-4 mb-16">
           <button
-            className="bg-[#181d27] hover:bg-[#535862] text-white px-6 py-2 rounded-full text-[16px] font-medium mb-4"
+            className="bg-[#181d27] hover:bg-[#535862] text-white w-30 py-1 sm:w-auto sm:px-6 sm:py-2 rounded-full text-[16px] font-medium mb-4"
             data-aos="fade-up"
           >
             Our Services

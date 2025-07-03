@@ -28,7 +28,7 @@ export const FeatureSection4 = () => {
         {/* Header Section */}
         <div className="flex flex-col items-center text-center gap-6 mb-12">
           <button
-            className="bg-[#181d27] hover:bg-[#535862] text-white px-6 py-2 rounded-full text-sm sm:text-base font-medium"
+            className="bg-[#181d27] hover:bg-[#535862] text-white w-30 py-1 sm:w-auto sm:px-6 sm:py-2 rounded-full text-sm sm:text-base font-medium"
             data-aos="fade-up"
           >
             Get Started
@@ -53,9 +53,9 @@ export const FeatureSection4 = () => {
           </p>
 
           <div className="mt-2" data-aos="fade-up" data-aos-delay="300">
-            <button className="flex items-center gap-2 px-5 py-2 rounded-xl bg-[#C23521] text-sm sm:text-base font-medium text-white transition duration-200 hover:bg-[#a02a1c]">
+            <button className="flex justify-center rounded-xl  w-30 py-1 sm:w-auto sm:px-5 sm:py-2 bg-[#C23521] text-sm sm:text-base font-medium text-white transition duration-200 hover:bg-[#a02a1c]">
               Learn More
-              <MdOutlineKeyboardArrowRight className="text-lg" />
+              <MdOutlineKeyboardArrowRight className="mt-1" />
             </button>
           </div>
         </div>

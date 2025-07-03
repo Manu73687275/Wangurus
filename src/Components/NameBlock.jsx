@@ -4,11 +4,11 @@ import sidepic from "../assets/sidepic.png";
 export const NameBlock = () => {
   return (
     <div
-      className=" pt-3 sm:pt-8 flex flex-col sm:flex-row items-center justify-between relative overflow-hidden ml-2.5"
+      className=" pt-3 sm:pt-8 flex flex-col sm:flex-row items-center justify-between relative overflow-hidden "
       data-aos="fade-up"
     >
       {/* Left Content */}
-      <div className="flex flex-col md:max-w-2xl lg:max-w-4xl text-center sm:text-left pl-4 z-10">
+      <div className="flex flex-col w-full md:max-w-2xl lg:max-w-4xl text-center sm:text-left z-10">
         <h1 className="text-white w-full text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
           Top Cyber Security for Your Protected Data
         </h1>
@@ -18,10 +18,10 @@ export const NameBlock = () => {
         </span>
 
         <div className="flex flex-col sm:flex-row gap-3 items-center justify-center sm:justify-start mt-5">
-          <button className="border-2 w-40  py-1 sm:px-4 sm:py-2 bg-white text-black rounded-xl hover:bg-gray-100 transition">
+          <button className=" w-30 py-1 sm:w-auto sm:px-4 sm:py-2 bg-white text-black rounded-xl hover:bg-gray-100 transition">
             Get In Touch
           </button>
-          <button className=" w-40 py-1 sm:px-4 sm:py-2 bg-red-500 text-white rounded-xl hover:bg-red-600 transition">
+          <button className=" w-30 py-1 sm:px-4 sm:py-2 bg-red-500 text-white rounded-xl hover:bg-red-600 transition">
             About Us
           </button>
         </div>

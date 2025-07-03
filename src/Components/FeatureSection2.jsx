@@ -39,7 +39,7 @@ export const FeatureSection2 = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
-          animateCounter(250, 20);
+          animateCounter(250, 200);
           hasAnimated.current = true;
         }
       },

@@ -14,7 +14,7 @@ export const BlogSection = () => {
           className="flex justify-center w-full lg:w-auto"
           data-aos="fade-right"
         >
-          <div className="bg-[#181d27] text-[#FFFFFF]  px-6 py-2 rounded-full text-[16px] font-medium">
+          <div className="bg-[#181d27] flex justify-center text-[#FFFFFF] w-30 py-1 sm:px-6 sm:py-2 rounded-full text-[16px] font-medium">
             Projects
           </div>
         </div>
@@ -23,7 +23,7 @@ export const BlogSection = () => {
           className="w-full lg:w-auto flex justify-center"
           data-aos="fade-left"
         >
-          <button className="bg-[#c23521] text-white px-4 py-2 rounded-xl flex items-center gap-2 hover:bg-[#a12e1c] transition-colors text-[16px] font-medium">
+          <button className="bg-[#c23521] text-white w-40 py-1 sm:w-auto sm:px-4 sm:py-2 rounded-xl flex justify-center items-center hover:bg-[#a12e1c] transition-colors text-[16px] font-medium">
             View all projects
             <ChevronRight className="w-4 h-4" />
           </button>

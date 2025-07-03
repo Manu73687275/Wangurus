@@ -34,7 +34,7 @@ export const NavBar = () => {
         </div>
 
         {/* Mobile Hamburger Icon */}
-        <div className="lg:hidden">
+        <div className="lg:hidden mt-4">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>

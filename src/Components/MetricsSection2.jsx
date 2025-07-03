@@ -39,10 +39,10 @@ export const MetricsSection2 = () => {
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <button className="bg-white text-[#414651] hover:bg-[#d5d7da] px-4 py-2 text-base font-semibold rounded-xl transition">
+          <button className="bg-white text-[#414651] hover:bg-[#d5d7da] w-30 py-1 sm:px-4 sm:py-2 text-base font-semibold rounded-xl transition">
             Get Started
           </button>
-          <button className="bg-[#c23521] text-white border border-[#c23521] hover:bg-[#a0251b] hover:border-[#a0251b] px-4 py-2 text-base font-semibold rounded-xl flex items-center gap-2 transition">
+          <button className="bg-[#c23521] text-white border border-[#c23521] hover:bg-[#a0251b] hover:border-[#a0251b] w-30 py-1 sm:w-auto sm:px-4 sm:py-2 text-base font-semibold rounded-xl flex items-center justify-center transition">
             Contact Us
             <ChevronRight className="w-4 h-4" />
           </button>

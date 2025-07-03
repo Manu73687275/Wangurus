@@ -53,16 +53,19 @@ export const BlogSection2 = () => {
       {/* Header Section */}
       <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12">
         <div
-          className="flex items-center justify-center sm:justify-between w-full lg:w-auto"
+          className="flex w-full justify-center lg:justify-start"
           data-aos="fade-right"
         >
-          <div className="bg-[#181d27] text-[#FFFFFF]  px-6 py-2.5 rounded-full text-[16px] font-medium">
+          <div className="bg-[#181d27] flex justify-center text-[#FFFFFF] px-6 py-2.5 rounded-xl text-[16px] font-medium">
             Blog News
           </div>
         </div>
 
-        <div className="w-full lg:w-auto flex justify-center" data-aos="fade-left">
-          <button className="bg-[#c23521] text-[#FFFFFF]  px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-[#a12e1c] transition-colors text-[16px] font-medium">
+        <div
+          className="w-full lg:w-auto flex justify-center"
+          data-aos="fade-left"
+        >
+          <button className="bg-[#c23521] text-[#FFFFFF] w-40 py-1 sm:w-44 sm:px-4 sm:py-2 rounded-xl flex justify-center items-center hover:bg-[#a12e1c] transition-colors text-[16px] font-medium">
             View all projects
             <ChevronRight className="w-4 h-4" />
           </button>
@@ -75,7 +78,7 @@ export const BlogSection2 = () => {
           data-aos-delay="100"
         >
           <h2 className="text-[#FFFFFF]  text-3xl sm:text-4xl md:text-4xl font-bold leading-tight max-w-3xl text-center sm:text-left">
-           Lastest blog posts
+            Lastest blog posts
           </h2>
           <p className="text-[#FFFFFF]  text-[18px] sm:text-[20px] md:text-[23px] leading-relaxed max-w-3xl text-center">
             Tool and strategies modern teams need to help their companies grow.
@@ -140,11 +143,6 @@ export const BlogSection2 = () => {
     </div>
   );
 };
-
-
-
-
-
 
 // import React, { useEffect, useState } from "react";
 // import { ChevronRight } from "lucide-react";
