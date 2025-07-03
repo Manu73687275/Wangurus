@@ -1,6 +1,7 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
 
+// Avatar imports (unchanged)
 import avatar1 from "../assets/profile_pic/Avatar1.png";
 import avatar2 from "../assets/profile_pic/Avatar2.png";
 import avatar3 from "../assets/profile_pic/Avatar3.png";
@@ -11,6 +12,7 @@ import avatar7 from "../assets/profile_pic/Avatar7.png";
 import avatar8 from "../assets/profile_pic/Avatar8.png";
 import avatar9 from "../assets/profile_pic/Avatar9.png";
 
+// Testimonials array (unchanged)
 const testimonials = [
   {
     company: "Powersurge",
@@ -67,7 +69,6 @@ const testimonials = [
     user: { name: "Harpal Singh", title: "Lead Designer", avatar: avatar9, verified: true },
   },
 ];
-
 // Split into N columns
 const splitIntoColumns = (arr, cols) => {
   const result = Array.from({ length: cols }, () => []);
@@ -82,6 +83,7 @@ export const TestimonialSection = () => {
 
   return (
     <section className="w-full bg-[#0E0200] py-16 overflow-hidden relative">
+      {/* Section Header */}
       <div className="text-center mb-12">
         <div className="inline-block bg-[#181d27] text-white px-4 py-2 rounded-full text-[16px] font-medium">
           Testimonial
@@ -91,16 +93,55 @@ export const TestimonialSection = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:mx-12">
+      {/* Mobile View: Single Scrollable Column */}
+      <div className="sm:hidden relative px-4">
+        {/* Top & Bottom Blur (only once) */}
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-[#0E0200] to-transparent z-10 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0E0200] to-transparent z-10 pointer-events-none" />
+
+        <div className="h-[500px] overflow-hidden group">
+          <div className="flex flex-col gap-6 animate-scroll-vert" style={{ animationDuration: "20s" }}>
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-[#121010] rounded-2xl p-6 text-white shadow-md transition-transform hover:scale-[1.03] border border-[#484646] flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-2xl">{testimonial.logo}</span>
+                    <span className="font-semibold text-lg">{testimonial.company}</span>
+                  </div>
+                  <p className="text-[#FFFFFF] text-sm leading-relaxed mb-6">{testimonial.text}</p>
+                </div>
+                <div className="flex items-center gap-3 mt-auto">
+                  <img
+                    src={testimonial.user.avatar}
+                    alt={testimonial.user.name}
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                  <div className="flex-1">
+                    <div className="flex items-center gap-1">
+                      <span className="text-white font-medium text-sm">{testimonial.user.name}</span>
+                      {testimonial.user.verified && <CheckCircle className="w-4 h-4 text-[#2e90fa]" />}
+                    </div>
+                    <p className="text-[#FFFFFF] text-xs">{testimonial.user.title}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop View: 3 Columns with Individual Blur */}
+      <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:mx-12">
         {columns.map((col, colIndex) => (
           <div key={colIndex} className="h-[500px] overflow-hidden group relative">
             {/* Top Blur */}
             <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-[#0E0200] to-transparent z-10 pointer-events-none" />
-
             {/* Bottom Blur */}
             <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0E0200] to-transparent z-10 pointer-events-none" />
 
-            {/* Scrollable Column */}
             <div
               className="flex flex-col gap-6 animate-scroll-vert"
               style={{
@@ -141,7 +182,7 @@ export const TestimonialSection = () => {
         ))}
       </div>
 
-      {/* Custom styles */}
+      {/* Animation Style */}
       <style>{`
         @keyframes scrollVert {
           0% { transform: translateY(0); }
